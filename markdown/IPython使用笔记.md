@@ -1,10 +1,3 @@
-Date: 2015-3-12 16:30
-Title: IPython 使用笔记
-Category: Python
-Summary: Ipython 文档大致理解和一些使用体验
-
-====================================
-
 #### 主要功能
 
 - IPython 结合了shell的方便特性和输入输出的历史记录机制

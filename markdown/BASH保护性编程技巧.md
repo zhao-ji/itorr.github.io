@@ -1,10 +1,3 @@
-Date: 2015-6-30 13:00
-Title: Bash 保护性编程技巧
-Category: bash
-Summary: how to write bash scripts
-
-================================
-
 ## 保护性编程技巧
 
 #### 不可改变的全局变量

@@ -1,10 +1,3 @@
-Date: 2014-8-10 20:30
-Title: 正则表达式
-Category: Re
-Summary: a summary of Regular Expression
-
-================
-
 #正则表达式
 
 ##元字符

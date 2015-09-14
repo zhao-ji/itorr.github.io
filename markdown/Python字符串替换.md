@@ -1,10 +1,3 @@
-Title: Python 字符串替换
-Category: Python
-Date: 2015-1-15 17:40
-Summary: String Replace In Python
-
-=================================
-
 ## 字符串替换
 
     def replace_words(text, word_dic): 
