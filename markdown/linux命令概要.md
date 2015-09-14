@@ -1,10 +1,3 @@
-Date: 2014-6-1 17:30
-Title: Linux命令概要
-Category: Linux
-Summary: Command Summary of Linux
-
-====================================
-
 #Linux命令概要
 
 ##帮助命令

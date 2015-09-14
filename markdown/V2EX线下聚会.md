@@ -1,10 +1,3 @@
-Date: 2015-3-22 20:30
-Title: V2EX 线下聚会
-Category: Tips
-Summary: Command Summary of Linux
-
-====================================
-
 ### 这次聚会影响我最深的是LIVID说：
 
 > "在200毫秒以内打开一个网页才算流畅"

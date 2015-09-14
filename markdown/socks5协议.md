@@ -1,10 +1,3 @@
-Date: 2015-1-13 12:16
-Title: Socks5协议
-Category: NetWork
-Sumary: Socks5 Protocol
-
-===========================
-
 ## socks5 协议
 
 #### 特点

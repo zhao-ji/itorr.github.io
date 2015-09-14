@@ -1,10 +1,3 @@
-Title: 一月点滴收集
-Category: Tips
-Date: 2015-1-13 16:30
-Summary: Tips in Jan
-
-=======================
-
 ## Python Tips
 
 #### Python 暴力字典生成（brute 算法）

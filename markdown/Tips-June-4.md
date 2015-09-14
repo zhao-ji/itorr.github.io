@@ -1,10 +1,3 @@
-Title: 五月点滴收集
-Category: Tips
-Date: 2015-5-4 8:00
-Summary: Tips in June
-
-=======================
-
 ## Vim Tips
 
 - Vim 中空格代替 制表符配置

@@ -1,11 +1,3 @@
-Date: 2015-1-12 20:00
-Title: netcat 使用笔记
-Tag: Linux-Command NetWork
-Category: NetWork
-Summary: the Linux Command NetCat
-
-======================
-
 ## netcat 三个例子
 
 ### 本地 client-server socket 模式

@@ -1,10 +1,3 @@
-Title: 四月点滴收集
-Category: Tips
-Date: 2015-4-11 19:00
-Summary: Tips in Apr
-
-=======================
-
 ## Shell Tips
 
 #### 安装新字体

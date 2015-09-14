@@ -1,10 +1,3 @@
-Date: 2015-1-21 17:15
-Category: 前端
-Title: HTML5 使用viewport自适应屏幕
-Summary: The use of viewport
-
-====================================
-
 #### 使用viewport自适应屏幕
 
 > https://gist.github.com/c34c44f9555e6646875c

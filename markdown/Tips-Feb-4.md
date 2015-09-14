@@ -1,10 +1,3 @@
-Title: 二月点滴收集
-Category: Tips
-Date: 2015-2-4 19:00
-Summary: Tips in Feb
-
-=======================
-
 ## Shell Tips
 
 #### dig 用法

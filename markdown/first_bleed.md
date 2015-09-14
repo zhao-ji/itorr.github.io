@@ -1,10 +1,3 @@
-Date: 2015-8-31 13:30
-Title: 一个穿法，不一定对
-Category: Network
-Summary: filter the fake DNS responce
-
-================================
-
 ## 现象陈述
 * 在国内请求谷歌DNS，GFW会返回虚假DNS应答包，俗称 DNS劫持
 * 有时是一个，但目前大多时候是两个

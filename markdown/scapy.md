@@ -1,10 +1,3 @@
-Date: 2015-7-15 18:30
-Title: Scapy
-Category: Network
-Summary: The begining of Scapy
-
-====================================
-
 # 抓包工具 Scapy
 
 ---
