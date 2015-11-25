@@ -2,7 +2,7 @@
 - 配置文件在 /etc/postgresql/9.1/main/postgresql.conf
     - log_destination = 'stderr' 日志输出到stderr
     - logging_collector = on 打开日志收集开关
-    - log_directory,log_filename,log_file_mode 输出目的地
+    - log\_directory,log\_filename,log\_file\_mode 输出目的地
 - 需要记录的操作类型 log_statement
     - none 不记录
     - ddl 记录create,drop,alter
@@ -10,7 +10,7 @@
     - all 记录mod + select
 - 记录慢查询
     - log_duration = on
-    - log_min_duration_statement = 2s 记录大于2秒的操作
+    - log\_min\_duration\_statement = 2s 记录大于2秒的操作
 - 监控数据库的锁
-    - log_lock_waits on 开启监控数据库的锁
+    - log\_lock\_waits on 开启监控数据库的锁
     - deadlock_timeout = 2s 记录锁长大于2s的操作
