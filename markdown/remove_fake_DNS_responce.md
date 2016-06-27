@@ -8,8 +8,8 @@
 
 ## 过滤手段
 * 根据 ToS 字段过滤掉 8.8.8.8 fake responce
-* sudo iptables -A INPUT -s 8.8.8.8 -p udp -sport 53 -m tos --tos 0x0 -j DROP
-* sudo iptables -A INPUT -s 8.8.8.8 -p udp -sport 53 -m tos --tos 0x10 -j DROP
+* sudo iptables -A INPUT -s 8.8.8.8 -p udp --sport 53 -m tos --tos 0x0 -j DROP
+* sudo iptables -A INPUT -s 8.8.8.8 -p udp --sport 53 -m tos --tos 0x10 -j DROP
 * 根据 flags DF 位过滤掉 208.67.222.222(OpenDNS) fake responce
 * sudo iptables -A INPUT -s 208.67.222.222 -p udp --sport 53 -m u32 --u32 "0x3&0x40>>0x6=0x0" -j DROP
 
