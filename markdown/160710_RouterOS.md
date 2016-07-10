@@ -12,9 +12,13 @@
 ### 操作步骤
   1. SSH登录Router OS
   2. 添加VPN接口
+
     > /interface pptp-client add user=hello password=hello default_route=no
+
   3. 添加策略路由 使标记为foreign的流量走VPN
+
     > /ip route add routing-mark=foreign gateway=vpn
+
   4. 整理国内IP为 address-list 标记为china 做成rsc脚本上传到ros 执行
     > /ip firewall address-list add address=1.0.1.0/24 name=china
   5. 打标签 把来自本地的 去往非国内流量非本地流量标记为 foreign
