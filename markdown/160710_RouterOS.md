@@ -20,13 +20,21 @@
     > /ip route add routing-mark=foreign gateway=vpn
 
   4. 整理国内IP为 address-list 标记为china 做成rsc脚本上传到ros 执行
+    
     > /ip firewall address-list add address=1.0.1.0/24 name=china
+
   5. 打标签 把来自本地的 去往非国内流量非本地流量标记为 foreign
+    
     > /ip mangle src-address=192.168.88.0/24 dst-address-list=!china dst-addres-type=!local action=marking-route new-routing-mark=foreign 
+
   6. 设置DHCP-SERVER 不使用运营商自带的DNS 用谷歌DNS
+    
     > /ip dhcp-server set dns=8.8.8.8
+
   7. 添加路由 到谷歌DNS的包走VPN
+
     > /ip route add dst=8.8.8.8/32 gateway=VPN
+
 
 ### 踩过的坑
   - VPN服务器路由配置不当 ROS的包出得来但是不知道怎么回去
