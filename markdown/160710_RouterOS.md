@@ -13,36 +13,40 @@
   1. SSH登录Router OS
   2. 添加VPN接口
 
-    > /interface pptp-client add user=hello password=hello default_route=no
+    > /interface pptp-client add name=vpn user=hello password=hello connect-to=1.2.3.4 default_route=no
 
   3. 添加策略路由 使标记为foreign的流量走VPN
 
     > /ip route add routing-mark=foreign gateway=vpn
 
   4. 整理国内IP为 address-list 标记为china 做成rsc脚本上传到ros 执行
-    
+
     > /ip firewall address-list add address=1.0.1.0/24 name=china
 
   5. 打标签 把来自本地的 去往非国内流量非本地流量标记为 foreign
-    
-    > /ip mangle src-address=192.168.88.0/24 dst-address-list=!china dst-addres-type=!local action=marking-route new-routing-mark=foreign 
 
-  6. 设置DHCP-SERVER 不使用运营商自带的DNS 用谷歌DNS
-    
-    > /ip dhcp-server set dns=8.8.8.8
+    > /ip mangle chain=prerouting src-address=192.168.88.0/24 dst-address-list=!china dst-addres-type=!local action=mark-routing new-routing-mark=foreign
 
-  7. 添加路由 到谷歌DNS的包走VPN
+  6. 路由器里面设置 VPN NAT
 
-    > /ip route add dst=8.8.8.8/32 gateway=VPN
-    
-  8. 路由器里面设置 VPN NAT
-  
     > /ip firewall nat add src-address=192.168.88.0/24 chain=srcnat action=masquerade out-interface=vpn
 
+  7. DNS设置为运营商分配的DNS 不用动
+  8. 在layer7-protocol中标记DNS查询中包含敏感词的请求
 
-### 踩过的坑
-  - 默认使用运营商DNS 设置DHCP server 的DNS才解决
-  - 现在默认使用国外DNS QQ空间和京东会上国外版
+    > /ip firewall layer7-protocol add comment="polute domain" name=polute regexp="polute-domain-regex"
+    
+  9. 在 prerouting 中标记流量
 
-### 急需改进的地方
-  - DNS必须默认使用运营商DNS 深度包检测敏感词然后打标记走8.8.4.4
+    > /ip firewall mangle add chain=prerouting action=mark-connection new-connection-mark=domain passthrough=yes protocol=udp layer7-protocol=polute dst-port=53
+    
+  10. nat 使DNS请求转向8.8.4.4查询
+
+    > /ip firewall nat add chain=dstnat action=dst-nat to-address=8.8.4.4 connection-mark=domain
+    > /ip firewall nat add chain=srcnat action=masquerade connection-mark=domain
+  
+  11. 过滤伪造的DNS响应
+
+    > /ip firewall filter add chain=input action=drop protocol=udp src-address=8.8.4.4 src-port=53 dscp=0
+    > /ip firewall filter add chain=input action=drop protocol=udp src-address=8.8.4.4 src-port=53 dscp=10
+
