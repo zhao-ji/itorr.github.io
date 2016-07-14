@@ -169,11 +169,11 @@ html[step="article"] section{
 .text blockquote{
 	font-size:.9em;
 	line-height:1.5;
-	background:#fbf3eb;
+	background: #aaa;
 	color:#a8988e;
 	margin:1em .2em;
 	padding:1.2em 1.5em;
-
+    border-left: solid black 4px;
 }
 .text blockquote p{
 	text-indent:0;
