@@ -163,7 +163,6 @@ html[step="article"] section{
 	border-radius: .3em;
 	text-shadow:0 1px 0 #000;
 }
-/*.article ul{padding-left:2em;list-style-type:disc;}*/
 
 .text blockquote{
 	font-size:.9em;
@@ -179,18 +178,6 @@ html[step="article"] section{
 	margin:0;
 }
 
-.text ul li:after{
-	content:'';
-	position:absolute;
-	top:50%;
-	left:.4em;
-
-	width:.4em;height:.4em;
-	margin-top:-.2em;
-	background:#333;
-	border-radius:9em;
-
-}
 .text a{
 	word-wrap:break-word;
 	word-break:normal;
