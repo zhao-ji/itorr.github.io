@@ -1,4 +1,8 @@
-html{font:1em "Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑", "STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;color:#222;}
+html {
+    font-size: 1em;
+    font-family: "lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    color: #222;
+}
 
 
 textarea,input,option,select,button{font:inherit;}
@@ -163,6 +167,7 @@ html[step="article"] section{
 	border-radius: .3em;
 	text-shadow:0 1px 0 #000;
 }
+/*.article ul{padding-left:2em;list-style-type:disc;}*/
 
 .text blockquote{
 	font-size:.9em;
