@@ -1,6 +1,5 @@
 ## New Zealand Culture Informal slang words/phrases
 
-Barefeet
 | slang  | explanation |
 |:------:|:------:|
 | Bare feet | People love feeling the ground, the grass and the dirt |
