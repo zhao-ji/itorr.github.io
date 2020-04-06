@@ -2,13 +2,14 @@
 <meta charset="UTF-8">
 <title>Trevor's Blog</title>
 <meta name="viewport" content="user-scalable=no,width=device-width">
+<link rel="stylesheet" href="i/typo.css">
 <link rel="stylesheet" href="i/i.css">
 <header>
     <h1>
         <a href="#/home">Trevor's Blog</a>
     </h1>
 </header>
-<section>
+<section class="typo">
 	<xmp>
 	{{#posts}}
 	<article>
@@ -19,7 +20,7 @@
 	{{/posts}}
 	</xmp>
 </section>
-<article class="article">
+<article class="article typo">
 	<xmp>
 	<div class="text">{{&text}}</div>
 	<span class="size">{{size}}</span>
